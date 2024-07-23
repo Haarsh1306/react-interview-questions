@@ -45,7 +45,7 @@ export const GridLight = () => {
         Grid-Light
       </h1>
       <div className="flex justify-center items-center flex-col bg-gray-900  mt-10">
-        <div className={`grid grid-cols-${config[0].length} gap-2`}>
+        <div className={`grid grid-cols-3 gap-2`}>
           {config
             .flat(1)
             .map((value, index) =>
