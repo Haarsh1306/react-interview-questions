@@ -22,7 +22,7 @@ export const InfiniteScroll = () => {
     const data: Post[] = await res.json();
 
     setCards((prevCards) => [...prevCards, ...data]);
-    setLoading(false)
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -30,13 +30,12 @@ export const InfiniteScroll = () => {
   }, [page]);
 
   const handleInfiniteScroll = async () => {
-    
     try {
       if (
         window.innerHeight + document.documentElement.scrollTop + 1 >=
         document.documentElement.scrollHeight
       ) {
-        setLoading(true)
+        setLoading(true);
         setPage((prev) => prev + 1);
       }
     } catch (error) {
@@ -44,25 +43,24 @@ export const InfiniteScroll = () => {
     }
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     window.addEventListener("scroll", handleInfiniteScroll);
     return () => window.removeEventListener("scroll", handleInfiniteScroll);
-  },[])
+  }, []);
 
   return (
-    <div>
+    <div className="bg-gray-900 min-h-screen">
       <AppBar />
-      <div className="flex justify-center items-center flex-col bg-gray-900 ">
-        <div className="grid grid-cols-3 gap-10 my-10">
+      <h1 className="text-gray-300 font-bold text-3xl text-center mt-10">
+        Infinite - Scroll
+      </h1>
+      <div className="flex justify-center items-center flex-col bg-gray-900  mt-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-4">
           {cards.map((card) => (
-            <PostCard
-              key={card.id}
-              id={card.id}
-              title={card.title}
-            />
+            <PostCard key={card.id} id={card.id} title={card.title} />
           ))}
         </div>
-        {loading && <Loader/>}
+        {loading && <Loader />}
       </div>
     </div>
   );

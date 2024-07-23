@@ -27,12 +27,13 @@ export const Search = () => {
   };
 
   return (
-    
-    <div>
-      <AppBar/>
-      <div className="flex justify-center flex-col bg-gray-900 h-screen">
-      
-        <form className="mx-auto">
+    <div className="bg-gray-900 min-h-screen">
+      <AppBar />
+      <h1 className="text-gray-300 font-bold text-3xl text-center mt-10">
+        Search on input change
+      </h1>
+      <div className="flex justify-center items-center flex-col bg-gray-900  mt-10">
+        <form className="mx-auto ">
           <label
             htmlFor="default-search"
             className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -61,12 +62,15 @@ export const Search = () => {
               className="block w-full p-4 ps-10 text-sm text-white border border-gray-600 rounded-lg bg-gray-700 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Search..."
             />
-            <button type="button" className="text-white absolute end-2.5 bottom-2.5 bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2">
+            <button
+              type="button"
+              className="text-white absolute end-2.5 bottom-2.5 bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2"
+            >
               Search
             </button>
           </div>
         </form>
-        <div className="mx-auto mt-10">
+        <div className="mx-auto my-10">
           <ul className="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
             {filteredList.length > 0 ? (
               filteredList.map((item) => (
