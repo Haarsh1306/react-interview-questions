@@ -17,14 +17,14 @@ export const PasswordGenerator = () => {
     updatedCheckboxData[i].state = !updatedCheckboxData[i].state;
     setCheckboxData(updatedCheckboxData);
   };
-  
+
   const { password, error, generatePassword } = usePasswordGenerator();
-  const handleCopy = () =>{
-    navigator.clipboard.writeText(password)
+  const handleCopy = () => {
+    navigator.clipboard.writeText(password);
     setCopied(true);
 
-    setTimeout((()=>setCopied(false)),1000)
-  }
+    setTimeout(() => setCopied(false), 1000);
+  };
   return (
     <div className="bg-gray-900 min-h-screen flex flex-col items-center">
       <AppBar />
@@ -35,8 +35,11 @@ export const PasswordGenerator = () => {
         {password && (
           <div className="flex justify-between items-center w-full ">
             <div className="text-white font-bold">{password}</div>
-            <button onClick={handleCopy} className="bg-blue-600 py-1 px-2 rounded-sm text-white font-normal hover:bg-blue-700 cursor-pointer">
-             {copied ? "Copied": "Copy"}
+            <button
+              onClick={handleCopy}
+              className="bg-blue-600 py-1 px-2 rounded-sm text-white font-normal hover:bg-blue-700 cursor-pointer"
+            >
+              {copied ? "Copied" : "Copy"}
             </button>
           </div>
         )}
