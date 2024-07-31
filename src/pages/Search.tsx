@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { AppBar } from "../components/AppBar";
-import { list } from "../Constants/Search";
+import { list } from "../Constants/Constant";
 
 const SearchList = list;
 export const Search = () => {
