@@ -7,6 +7,7 @@ import { DragNotes } from "../pages/DragNotes"
 import { Stepper } from "../pages/Stepper"
 import { PasswordGenerator } from "../pages/PasswordGenerator"
 import { Error } from "../pages/Error"
+import { Quiz } from "../pages/Quiz"
 
 export const AppRoute = () =>{
     return (
@@ -26,6 +27,7 @@ export const AppRoute = () =>{
             path="/password-generator"
             element={<PasswordGenerator />}
           ></Route>
+          <Route path="/quiz" element={<Quiz/>}></Route>
           <Route path="/*" element={<Error />}></Route>
         </Routes>
       </BrowserRouter>

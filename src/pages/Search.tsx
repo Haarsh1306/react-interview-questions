@@ -1,23 +1,13 @@
 import React, { useMemo, useState } from "react";
 import { AppBar } from "../components/AppBar";
+import { list } from "../Constants/Search";
 
-const list = [
-  { id: 1, name: "Apple" },
-  { id: 2, name: "Banana" },
-  { id: 3, name: "Cherry" },
-  { id: 4, name: "Date" },
-  { id: 5, name: "Elderberry" },
-  { id: 6, name: "Fig" },
-  { id: 7, name: "Grape" },
-  { id: 8, name: "Honeydew" },
-  { id: 9, name: "Indian Fig" },
-  { id: 10, name: "Jackfruit" },
-];
+const SearchList = list;
 export const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredList = useMemo(() => {
-    return list.filter((item) =>
+    return SearchList.filter((item) =>
       item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
   }, [searchTerm]);
