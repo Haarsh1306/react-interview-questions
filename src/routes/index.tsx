@@ -14,6 +14,7 @@ export const AppRoute = () =>{
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/home" element={<Home />}></Route>
           <Route path="/search" element={<Search />}></Route>
           <Route path="/infinite-scroll" element={<InfiniteScroll />}></Route>
           <Route path="/grid-light" element={<GridLight />}></Route>
