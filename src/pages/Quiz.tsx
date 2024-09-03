@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AppBar } from "../components/AppBar";
-import { Questions } from "../Constants/Constant";
+import { Questions } from "../utils/constant";
 import { QuestionCard } from "../components/QuestionCard";
 import { Result } from "../components/Result";
 
@@ -24,7 +24,7 @@ export const Quiz = () => {
       <h1 className="text-gray-300 font-bold text-3xl text-center mt-10">
         Quiz App
       </h1>
-      <div className="flex justify-center items-center flex-col bg-gray-900  mt-10">    
+      <div className="flex justify-center items-center flex-col bg-gray-900 mx-5 md:mx-0 mt-10">    
         {currentQuestion < Questions.length ? (
           <QuestionCard
             question={Questions[currentQuestion]}

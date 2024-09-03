@@ -31,7 +31,7 @@ export const PasswordGenerator = () => {
       <h1 className="text-gray-300 font-bold text-3xl text-center mt-10">
         Password Generator
       </h1>
-      <div className="flex justify-center items-center flex-col gap-8 bg-gray-700 w-4/12 p-5 mt-10">
+      <div className="flex justify-center items-center flex-col gap-8 bg-gray-700 w-72 md:w-4/12 p-5 mt-10">
         {password && (
           <div className="flex justify-between items-center w-full ">
             <div className="text-white font-bold">{password}</div>

@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { AppBar } from "../components/AppBar";
-import { list } from "../Constants/Constant";
+import { list } from "../utils/constant";
 
 const SearchList = list;
 export const Search = () => {
@@ -22,7 +22,7 @@ export const Search = () => {
       <h1 className="text-gray-300 font-bold text-3xl text-center mt-10">
         Search on input change
       </h1>
-      <div className="flex justify-center items-center flex-col bg-gray-900  mt-10">
+      <div className="flex justify-center items-center flex-col bg-gray-900  mx-5 mt-10">
         <form className="mx-auto ">
           <label
             htmlFor="default-search"
@@ -30,7 +30,7 @@ export const Search = () => {
           >
             Search
           </label>
-          <div className="min-w-96 relative">
+          <div className="min-w-80 md:min-w-96 relative">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
               <svg
                 className="w-4 h-4 text-gray-500 dark:text-gray-400"
